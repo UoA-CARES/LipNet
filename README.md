@@ -54,7 +54,7 @@ pip install -r requirements.txt
 This one is optional but to use the conda environment in Notebook, run:
 ```
 conda install ipykernel -y
-ipython kernel install --user --name=mmsign
+ipython kernel install --user --name=lips
 ```
 
 ## Setup
