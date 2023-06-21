@@ -8,11 +8,11 @@ This is a Keras implementation of [LipNet: End-to-End Sentence-level Lipreading]
   width=300
   height=auto
   ><br>
-    <p style="font-size:1.5vw;">This GIF makes me want to vomit</p>
+    <p style="font-size:1.5vw;">♪ ♫ ♪</p>
   </div>
 </div>
 
-# Requirements
+## Requirements
 ### Setting up a conda environment
 
 #### Install MiniConda
@@ -39,10 +39,13 @@ conda activate lips
 Make sure to run ```conda activate lips``` before running any of the scripts in this repo.
 
 ### Installing Dependencies
-The current implementation is in TensorFlow (since the original paper also used Tensorflow). There are plans to shift it to PyTorch in the future.
+
+#### TensorFlow
+The current implementation is in TensorFlow (since the original paper also used Tensorflow). There are plans to shift it to PyTorch in the future. 
 
 Install Tensorflow using their official [step-by-step instructions](https://www.tensorflow.org/install/pip#:~:text=Step%2Dby%2Dstep-,instructions,-Linux).
 
+#### Dependencies
 Install other dependencies using:
 ```
 pip install -r requirements.txt
