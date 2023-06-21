@@ -94,4 +94,4 @@ streamlit run ./streamlitapp.py
 ```
 
 
-This implementation uses[CTC Loss](https://distill.pub/2017/ctc/).
+This implementation uses [CTC Loss](https://distill.pub/2017/ctc/).
