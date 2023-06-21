@@ -12,11 +12,11 @@ st.set_page_config(layout='wide')
 
 # Setup the sidebar
 with st.sidebar: 
-    st.image('https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png')
+    st.image('https://i.pinimg.com/550x/51/45/66/5145668e8e638ae7341fa408a76a0fbf.jpg')
     st.title('LipBuddy')
-    st.info('This application is originally developed from the LipNet deep learning model.')
+    st.info('This application is originally developed from the LipNet deep learning paper.')
 
-st.title('LipNet Full Stack App') 
+st.title('LipNet Testing') 
 # Generating a list of options or videos 
 options = os.listdir(os.path.join('..', 'data', 's1'))
 selected_video = st.selectbox('Choose video', options)
@@ -39,7 +39,7 @@ if options:
 
 
     with col2: 
-        st.info('This is all the machine learning model sees when making a prediction')
+        st.info('This is all the model sees when making a prediction')
         video, annotations = load_data(tf.convert_to_tensor(file_path))
         imageio.mimsave('animation.gif', video, fps=10)
         st.image('animation.gif', width=400) 
