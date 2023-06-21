@@ -1,8 +1,11 @@
 import tensorflow as tf
 import cv2
 import os
+import numpy as np
+import imageio
 
-from typing import List
+
+from typing import List, Union
 
 vocab = [x for x in "abcdefghijklmnopqrstuvwxyz'?!123456789 "]
 char_to_num = tf.keras.layers.StringLookup(vocabulary=vocab, oov_token="")
@@ -12,7 +15,38 @@ num_to_char = tf.keras.layers.StringLookup(
     vocabulary=char_to_num.get_vocabulary(), oov_token="", invert=True
 )
 
+def load_video(path:str) -> List[float]:
+    """Loads the frames of a video file, converts frames to grayscale,
+    crops the mouth, and standardises the frames.
+    
+    Args:
+        path (string): Path for the video file.
+        
+    Returns:
+        List[float]: Frames of the video in a tensor.
+    """
+    cap = cv2.VideoCapture(path)
+    frames = []
+    
+    for _ in range(int(cap.get(cv2.CAP_PROP_FRAME_COUNT))):
+        flag, frame = cap.read()
+        
+        if not flag:
+            return
+        
+        frame = tf.image.rgb_to_grayscale(frame)
+        
+        # Crop using static co-ords (could use another model to get exact lips location)
+        frames.append(frame[190:236, 80:220, :])
+        
+    cap.release()
+    
+    mean = tf.math.reduce_mean(frames)
+    std = tf.math.reduce_std(tf.cast(frames, tf.float32))
+    
+    return tf.cast((frames-mean), tf.float32) / std
 
+    
 def load_alignments(path: str) -> np.ndarray:
     """ Loads the alignments and tokenizes them.
     Args:
