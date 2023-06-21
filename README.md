@@ -94,4 +94,4 @@ streamlit run ./app/streamlitapp.py
 
 TODO: The model can be run using Steamlit.
 
-[CTC Loss](distill.pub/2017/ctc/)
+[CTC Loss](https://distill.pub/2017/ctc/)
