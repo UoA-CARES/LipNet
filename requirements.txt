@@ -82,9 +82,6 @@ nest-asyncio==1.5.6
 notebook-shim==0.2.3
 notebook==6.5.4
 numpy==1.23.5
-nvidia-cublas-cu117==11.10.1.25
-nvidia-cublas-cu11==2022.4.8
-nvidia-cudnn-cu11==8.6.0.163
 oauthlib==3.2.2
 opencv-python==4.7.0.72
 opt-einsum==3.3.0
