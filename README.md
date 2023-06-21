@@ -78,12 +78,18 @@ This should download and extract the [GRID](https://paperswithcode.com/sota/lipr
 │       └── ...
 ...
 ```
-The ```./data/alignments/s1``` folder contains the ground-truth or alignments in the ```.align``` format and the input videos are stored in the ```./data/s1``` folder.
+The ```./data/alignments/s1``` folder contains the ground-truth or alignments in the ```.align``` format, and the input videos are stored in the ```./data/s1``` folder.
 
 ### Training the model
 
 All modelling parts are in the notebook ```LipNet.ipynb```.
 
 ### Running the model
+
+For Streamlit, you need to have [FFmpeg](https://www.hostinger.com/tutorials/how-to-install-ffmpeg) installed. Run the following in terminal to run the model in streamlit:
+
+```
+streamlit run ./app/streamlitapp.py
+```
 
 TODO: The model can be run using Steamlit.
