@@ -86,12 +86,12 @@ All modelling parts are in the notebook ```LipNet.ipynb```.
 
 ### Running the model
 
-For Streamlit, you need to have [FFmpeg](https://www.hostinger.com/tutorials/how-to-install-ffmpeg) installed. Run the following in terminal to run the model in streamlit:
+For Streamlit, you need to have [FFmpeg](https://www.hostinger.com/tutorials/how-to-install-ffmpeg) installed. Run the following in the terminal to run the model in Streamlit:
 
 ```
-streamlit run ./app/streamlitapp.py
+cd ./app
+streamlit run ./streamlitapp.py
 ```
 
-TODO: The model can be run using Steamlit.
 
-[CTC Loss](https://distill.pub/2017/ctc/)
+This implementation uses [CTC Loss](https://distill.pub/2017/ctc/).
