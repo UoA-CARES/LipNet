@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 wandb
+data
 app/__pycache__
 app/.vscode
 models
