@@ -60,25 +60,28 @@ ipython kernel install --user --name=lips
 ## Setup
 ### Downloading and extracting the dataset
 
-From the root of the repository, run:
-```
-python get_data.py
-```
-This should download and extract the [GRID](https://paperswithcode.com/sota/lipreading-on-grid-corpus-mixed-speech) dataset into the ```./data``` folder.
+Extract [LRS2_v1](https://www.robots.ox.ac.uk/~vgg/data/lip_reading/lrs2.html) in the data folder such that the directory looks as below:
+
 ```
 .
 ├── app
 ├── data
-│   ├── alignments
-│   │   └── s1
-│   │       ├── bbaf2n.align
-│   │       └── ...
-│   └── s1
-│       ├── bbaf2n.mpg
-│       └── ...
+│   ├── lrs2_v1
+│   │   └── mvlrs_v1
+│   │       ├── main
+│   │       │   ├── 5535415699068794046
+│   │       │   └── ...
+│   │       └── pretrain
+│   │       │   ├── 5535415699068794046
+│   │       │   └── ...
+│   │       ├── pretrain.txt
+│   │       ├── test.txt
+│   │       ├── train.txt
+│   │       └── val.txt
+│   └── ...
 ...
 ```
-The ```./data/alignments/s1``` folder contains the ground-truth or alignments in the ```.align``` format, and the input videos are stored in the ```./data/s1``` folder.
+The ```./data/mvlrs_v1/main``` and ```./data/mvlrs_v1/pretrain```folders contain folders with videos and ground truths, and the ```.txt``` files contain the individual video numbers for each split.
 
 ### Training the model
 
